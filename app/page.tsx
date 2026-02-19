@@ -1,3 +1,4 @@
+// app/page.tsx
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { googleSignIn } from "./app/actions/auth"; 

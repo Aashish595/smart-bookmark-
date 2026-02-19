@@ -8,7 +8,7 @@ Save, manage, and access your links instantly — synced across browser tabs wit
 
 ## 🌐 Live Demo
 
-🔗 https://your-domain.com  
+🔗https://smart-bookmark-ten-ebon.vercel.app/
 *(Optional – add when deployed)*
 
 ---

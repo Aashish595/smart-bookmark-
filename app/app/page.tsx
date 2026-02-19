@@ -1,3 +1,4 @@
+// app/app/page.tsx
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import BookmarksClient from "./bookmarks-client";
