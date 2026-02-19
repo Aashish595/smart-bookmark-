@@ -1,0 +1,23 @@
+import { createClient } from '@/lib/supabase/server';
+import { redirect } from 'next/navigation';
+import Navbar from '@/components/Navbar';
+
+export default async function AppLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
+    redirect('/');
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navbar userEmail={user.email} />
+      <main>{children}</main>
+    </div>
+  );
+}
