@@ -46,7 +46,6 @@ Save, manage, and access your links instantly — synced across browser tabs wit
 
 ### Clone Repository
 
-```bash
 git clone https://github.com/your-username/smart-bookmarks.git
 cd smart-bookmarks
 
@@ -54,9 +53,9 @@ cd smart-bookmarks
 **Install Dependencies**
 npm install
 
-Setup Environment Variables
+## Setup Environment Variables
 
-Create a .env.local file:
+# Create a .env.local file:
 
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
@@ -69,7 +68,7 @@ App runs at:
 
 http://localhost:3000
 
-🗄 Database Schema
+# 🗄 Database Schema
 create table bookmarks (
   id uuid primary key default gen_random_uuid(),
   title text not null,
@@ -79,17 +78,17 @@ create table bookmarks (
 );
 
 
-Enable Row Level Security:
+# Enable Row Level Security:
 
 alter table bookmarks enable row level security;
 
-🔄 Realtime Setup
+# 🔄 Realtime Setup
 
 Ensure the table is added to Supabase Realtime:
 
 alter publication supabase_realtime add table public.bookmarks;
 
-🔐 Authentication
+# 🔐 Authentication
 
 Google OAuth handled via Supabase
 
@@ -99,7 +98,7 @@ Server-side auth validation
 
 Protected routes using Next.js App Router
 
-📈 Architecture Overview
+# 📈 Architecture Overview
 
 Server Components fetch initial data
 
@@ -109,7 +108,7 @@ Supabase WebSockets sync updates across tabs
 
 Optimistic UI updates for instant feedback
 
-🧠 Key Concepts Implemented
+# 🧠 Key Concepts Implemented
 
 Real-time subscriptions with WebSockets
 
@@ -121,18 +120,8 @@ Secure row-level access control
 
 Client/server separation in Next.js
 
-📌 Future Improvements
-
-Bookmark categories
-
-Search & filtering
-
-Drag-and-drop sorting
-
-Dark mode toggle
 
 Deployment on Vercel
 
-📄 License
-
-MIT License
+# Author 
+Gurudas Maurya
